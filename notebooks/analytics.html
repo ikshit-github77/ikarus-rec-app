@@ -1,0 +1,51 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "29fce441",
+   "metadata": {},
+   "source": [
+    "# Analytics Notebook\n",
+    "- Load data\n",
+    "- Explore distributions\n",
+    "- Brand/category breakdowns\n",
+    "- Price statistics\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8f742ce7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import pandas as pd, seaborn as sns, matplotlib.pyplot as plt\n",
+    "from pathlib import Path\n",
+    "DATA = Path('../backend/app/data/intern_data_ikarus.csv')\n",
+    "df = pd.read_csv(DATA)\n",
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8b69db44",
+   "metadata": {},
+   "source": [
+    "sns.histplot(df['price'].dropna()); plt.title('Price distribution'); plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "eeab3463",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "df['brand'].value_counts().head(20)"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
