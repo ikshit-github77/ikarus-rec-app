@@ -1,0 +1,20 @@
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+python-multipart==0.0.9
+
+pandas==2.2.3
+numpy==1.26.4
+scikit-learn==1.5.1
+
+sentence-transformers==3.0.1
+transformers==4.44.2
+
+torch==2.4.1
+torchvision==0.19.1
+
+# Only keep pinecone if your code actually imports/uses it at runtime:
+# pinecone-client==5.0.1
+# If you previously added faiss-cpu and you don't 100% need it, leave it OUT.
